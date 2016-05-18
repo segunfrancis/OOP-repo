@@ -36,7 +36,8 @@ function NotesApplication(author) {
 
 	this.delete = function(note_id) {
 		if (note_id > -1) {
-			this.notes.splice(note_id, 1)
+			a = this.notes.splice(note_id, 1);
+			return a;
 		}
 	};
 
