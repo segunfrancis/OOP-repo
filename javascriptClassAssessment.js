@@ -16,16 +16,20 @@ function NotesApplication(author) {
   		console.log(this.notes);
   		console.log("By author: " + author);
   		};
-	var get = function(note_id) {
-		for (c in this.notes) {
-			return this.notes[c]
-		};
-	}
 	
-	var search = function(search_text) {
-		for (a in this.notes) {
-			if (search_text === a) {
-				return a
+	this.get = function(note_id) {
+  		return this.notes;
+    };
+
+  	this.search = function(search_text) {
+  		for(var x in this.notes) {
+  			if(search_text === x) {
+  				console.log("Showing results for search " + search_text);
+  				console.log("Note ID: " + this.note_id);
+  				console.log(this.notes);
+  				console.log("By author: " + author);
+  			} else {
+  				console.log("Not Found!");
 			}
 		}
 	};
