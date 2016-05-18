@@ -2,15 +2,20 @@ function NotesApplication(author) {
 	this.author = author;
 	this.notes =[];
 	
-	var create = function(note_content) {
+	this.create = function(note_content) {
 		return this.notes.push('note_content');
 	};
 	
-	var listNotes = function() {
-		for (var x in this.notes) {
-			return this.notes[x]; 
+	this.listNotes = function() {
+		this.note_id = function() {
+		for (var i = 0; i < this.notes.length; i++) {
+			return i; 
 		}
-	};
+		};
+		console.log("Note ID: " + this.note_id());
+  		console.log(this.notes);
+  		console.log("By author: " + author);
+  		};
 	var get = function(note_id) {
 		for (c in this.notes) {
 			return this.notes[c]
