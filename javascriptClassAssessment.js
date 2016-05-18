@@ -47,3 +47,10 @@ function NotesApplication(author) {
 	};
 }
 
+var mike = new NotesApplication('William');
+mike.create("It's been good so far");
+mike.listNotes();
+mike.get("Hey");
+mike.search("why");
+mike.edit("oh", "what");
+mike.delete(0)
