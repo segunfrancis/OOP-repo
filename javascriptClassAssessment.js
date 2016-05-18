@@ -3,15 +3,14 @@ function NotesApplication(author) {
 	this.notes =[];
 	
 	var create = function(note_content) {
-		note_content += this.notes
-		return note_content
+		return this.notes.push('note_content');
 	};
 	
 	var listNotes = function() {
-		for (i in this.notes) {
-			return i 
-		};
-	}
+		for (var x in this.notes) {
+			return this.notes[x]; 
+		}
+	};
 	var get = function(note_id) {
 		for (c in this.notes) {
 			return this.notes[c]
