@@ -34,15 +34,15 @@ function NotesApplication(author) {
 		}
 	};
 
-	var delete = function(note_id) {
+	this.delete = function(note_id) {
 		if (note_id > -1) {
 			this.notes.splice(note_id, 1)
 		}
-	}
+	};
 
-	var edit = function(note_id, new_content) {
-		new_content = note_id;
-		return new_content
-	}
+	this.edit = function(note_id, new_content) {
+		note_id = new_content;
+		return note_id
+	};
 }
 
