@@ -3,7 +3,10 @@ function NotesApplication(author) {
 	this.notes =[];
 	
 	this.create = function(note_content) {
-		return this.notes.push([this.notes.length + 1,note_content]);
+		if(note_content.length === 0) {
+			return "error";
+		}
+		this.notes.push([this.notes.length + 1,note_content]);
 	};
 	
 	this.listNotes = function() {
@@ -26,6 +29,9 @@ function NotesApplication(author) {
     };
 
   	this.search = function(search_text) {
+  		if(typeof search_text !== 'string') {
+  			return "error";
+  		}
   		console.log("Showing results for search " + '"'+search_text+'"');
   		var result = [];
   		for(var x = 0; x < this.notes.length;x++) {
